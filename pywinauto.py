@@ -10,11 +10,11 @@ import glob
 import os
 client = pymongo.MongoClient('localhost',27017)
 db = client['ausceo']
-new = client['ausceocrunch']
+new = client['ausceonew']
 chrome = Application(backend='uia')
 #--incognito
 chrome.start(chrome_dir + ' --force-renderer-accessibility  --start-maximized '
-             'https://crunchbase.com') 
+             'https://domain.com') 
 path  =  'D:\\Download\\'
 html_files = [f for f in os.listdir(path) if f.endswith('.html')]
 html_files = [d[:4] for d in html_files]   
